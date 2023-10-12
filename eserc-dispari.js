@@ -1,7 +1,5 @@
 // chiedere all'utente di scegliere tra pari e dispari
 const pariDispariUser = prompt('inserisci pari o dispari');
-let pari 
-let dispari 
 console.log(pariDispariUser, 'scelta utente')
 
 // chiedere all'utente di scegliere un numero da 1 a 5
@@ -24,12 +22,12 @@ console.log(totNum)
 
 function isEven(num) {
     if (num % 2 === 0) {
-        pari = true
-        return pari
+        
+        return true
 
     } else {
-        dispari = false
-        return dispari
+        
+        return false
 
     }
 }
@@ -42,9 +40,9 @@ if (isEven(totNum)) {
     console.log('il numero è dispari')
 }
 
-if (pariDispariUser === pari && numUser === pari) {
+if (isEven(totNum) === true && pariDispariUser === 'pari') {
     console.log('Hai Vinto')
-} else if (pariDispariUser === dispari && numUser === dispari) {
+} else if (isEven(totNum) === false && pariDispariUser === 'dispari') {
         console.log('Hai Vinto')
 } else {
         console.log('Hai Perso')
